@@ -1,0 +1,108 @@
+# Transcripción de Reunión: Levantamiento de Requerimientos del Sistema de Gestión de Inventario
+
+**Fecha:** 10 de abril de 2025
+**Hora:** 10:00 - 11:30
+**Lugar:** Sala de Conferencias A - Oficinas Centrales
+**Participantes:**
+- María Rodríguez (MR) - Gerente de Proyecto
+- Carlos Vega (CV) - Analista de Sistemas
+- Elena Torres (ET) - Representante del Departamento de Logística
+- Juan Méndez (JM) - Jefe de Almacén
+- Ana Gómez (AG) - Representante de Finanzas
+
+---
+
+**MR:** Buenos días a todos. Gracias por asistir a esta reunión para el levantamiento de requerimientos del nuevo sistema de gestión de inventario. El objetivo principal es identificar las necesidades específicas de cada departamento para diseñar una solución que mejore nuestros procesos actuales. Carlos nos guiará a través de las preguntas técnicas.
+
+**CV:** Gracias, María. Para comenzar, me gustaría entender cómo funciona el proceso actual de gestión de inventario. ¿Quién podría explicarnos esto?
+
+**JM:** Actualmente utilizamos una combinación de hojas de cálculo y un sistema antiguo que ya no recibe actualizaciones. Cada vez que recibimos mercancía, registramos manualmente los datos en Excel y luego los introducimos en el sistema. Para las salidas de inventario, seguimos un proceso similar. Es bastante ineficiente y propenso a errores.
+
+**ET:** Además, no tenemos visibilidad en tiempo real. A menudo descubrimos que nos quedamos sin existencias solo cuando un cliente hace un pedido. Tampoco podemos realizar fácilmente un seguimiento de los productos por lote o fecha de caducidad, lo que es crucial para algunos de nuestros artículos perecederos.
+
+**CV:** Entiendo. ¿Podrían detallar qué tipo de informes o análisis necesitan generar regularmente?
+
+**AG:** Desde finanzas, necesitamos reportes mensuales de valoración de inventario, análisis de rotación de productos, y alertas cuando los artículos de alto valor estén por debajo de cierto umbral. También necesitamos integración con nuestro sistema contable para evitar la doble entrada de datos.
+
+**ET:** En logística necesitamos previsiones de demanda basadas en datos históricos, optimización de rutas de almacenamiento y recogida, y la capacidad de establecer niveles mínimos de stock por temporada, ya que algunos productos tienen demanda estacional.
+
+**JM:** Para el almacén, necesitamos funcionalidades de escaneo de códigos de barras o QR, la posibilidad de gestionar múltiples ubicaciones dentro del almacén, y un sistema de alertas para productos próximos a caducar o con poco movimiento.
+
+**CV:** ¿Cuántos usuarios aproximadamente utilizarán el sistema y con qué frecuencia?
+
+**JM:** En el almacén somos 12 personas, y todos necesitaríamos acceso diario, prácticamente constante durante las horas de trabajo.
+
+**ET:** En logística unas 8 personas necesitarían acceso regular, principalmente para consultas y generación de informes.
+
+**AG:** En finanzas, unas 5 personas necesitarían acceso, principalmente para informes mensuales y auditorías.
+
+**MR:** También consideremos que la dirección general, unas 3 personas, necesitarán acceso a dashboard y reportes ejecutivos.
+
+**CV:** ¿Qué dispositivos se utilizarán para acceder al sistema?
+
+**JM:** En el almacén necesitamos acceso desde tablets o dispositivos móviles robustos que puedan soportar el entorno de trabajo. Idealmente con soporte para lectores de códigos de barras.
+
+**ET:** En logística principalmente desde ordenadores de escritorio, pero también sería útil el acceso desde dispositivos móviles para cuando estamos en ruta o fuera de la oficina.
+
+**AG:** Finanzas principalmente desde ordenadores de escritorio.
+
+**CV:** ¿Existen sistemas con los que debamos integrarnos?
+
+**AG:** Sí, necesitamos integración con nuestro sistema contable SAP Business One.
+
+**ET:** También sería ideal la integración con nuestro sistema de gestión de pedidos y el software de transporte que utilizamos para coordinar envíos.
+
+**MR:** ¿Cuáles son los mayores dolores de cabeza con el sistema actual que definitivamente deberíamos solucionar?
+
+**JM:** La duplicación de trabajo es el principal problema. Introduzco los mismos datos varias veces en diferentes sistemas. También las discrepancias entre el inventario físico y lo que muestra el sistema nos causan muchos problemas.
+
+**ET:** Para mí, la falta de trazabilidad y la imposibilidad de hacer un seguimiento preciso del inventario en tiempo real es lo más frustrante.
+
+**AG:** En finanzas, la valoración incorrecta del inventario y la dificultad para reconciliar las discrepancias nos complica mucho los cierres mensuales.
+
+**CV:** En cuanto a seguridad y permisos, ¿qué niveles de acceso necesitaríamos configurar?
+
+**MR:** Necesitamos varios niveles: administradores con acceso total, gerentes con capacidad de aprobación y generación de informes, operadores que puedan registrar movimientos pero no modificar datos históricos, y usuarios de solo lectura para consultas.
+
+**JM:** También sería importante poder restringir el acceso por ubicación o tipo de inventario, ya que algunos productos requieren manejo especial o tienen restricciones regulatorias.
+
+**CV:** ¿Qué volumen de datos estamos manejando? ¿Cuántos SKUs diferentes y cuántas transacciones diarias aproximadamente?
+
+**JM:** Actualmente tenemos unos 5.000 SKUs activos, con un promedio de 200-300 transacciones diarias entre entradas, salidas y ajustes.
+
+**ET:** En temporadas altas, como navidad, las transacciones pueden aumentar hasta 500-600 diarias.
+
+**CV:** En cuanto a la generación de reportes, ¿qué tan personalizables necesitan que sean?
+
+**AG:** Necesitamos poder personalizar los campos, filtros y agrupaciones. Idealmente con la opción de guardar plantillas de informes frecuentes.
+
+**ET:** También sería útil poder programar informes recurrentes que se envíen automáticamente por correo electrónico.
+
+**MR:** ¿Cuáles son las expectativas sobre el tiempo de implementación? ¿Hay alguna fecha límite que debamos considerar?
+
+**ET:** Sería ideal tenerlo funcionando antes de la temporada alta que comienza en septiembre.
+
+**AG:** Para finanzas, sería conveniente implementarlo justo después de un cierre trimestral, preferiblemente a principios de julio.
+
+**MR:** Bien, consideraremos estas fechas en la planificación. Para ir concluyendo, ¿hay algún requisito adicional que no hayamos cubierto?
+
+**JM:** Me gustaría que el sistema pudiera manejar fotos de productos y documentos adjuntos como certificados de calidad o fichas técnicas.
+
+**ET:** Para logística sería útil tener visualizaciones gráficas del almacén, mostrando la ubicación física de los productos y niveles de ocupación.
+
+**AG:** Desde finanzas, necesitaríamos capacidad para manejar múltiples monedas y ajustes por tipo de cambio, ya que importamos de varios países.
+
+**CV:** Excelente, esto nos da una buena base para comenzar. ¿Alguna pregunta final antes de terminar?
+
+**JM:** ¿Cuál sería el proceso de migración de datos desde el sistema actual?
+
+**CV:** Buen punto. Planearemos una estrategia de migración que incluirá un periodo de validación de datos para asegurar que todo se transfiera correctamente. Trabajaremos con cada departamento para verificar la integridad de la información.
+
+**MR:** Gracias a todos por sus aportaciones. Carlos preparará un documento con los requerimientos recogidos hoy y lo compartirá para revisión. Programaremos una segunda reunión la próxima semana para refinar estos requisitos y comenzar a priorizar las funcionalidades.
+
+**CV:** Por favor, si piensan en requisitos adicionales, envíenlos por correo electrónico antes de la próxima reunión.
+
+**MR:** Con esto concluimos. Gracias por su tiempo y valiosas contribuciones.
+
+---
+*Fin de la transcripción*
