@@ -66,11 +66,11 @@ Esta herramienta es útil para equipos de desarrollo de software que desean auto
    uv add python-dotenv
    ```
 
-   ó
-
-   ```
-   pip install python-dotenv
-   ```
+   > **Nota**: Si prefiere usar pip en lugar de uv:
+   >
+   > ```
+   > pip install python-dotenv
+   > ```
 
    Y modificar el inicio de su script para cargar explícitamente las variables:
 
