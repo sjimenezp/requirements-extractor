@@ -1,6 +1,6 @@
 # Extractor de Requerimientos con DSPy
 
-Este proyecto utiliza DSPy y modelos de lenguaje grandes para extraer automáticamente requerimientos estructurados a partir de transcripciones de reuniones de levantamiento de requerimientos.
+Este proyecto utiliza DSPy y modelos de lenguaje grandes (LLM's) para extraer automáticamente requerimientos estructurados a partir de transcripciones de reuniones de levantamiento de requerimientos.
 
 ## Descripción
 
@@ -31,17 +31,18 @@ Esta herramienta es útil para equipos de desarrollo de software que desean auto
    cd requirements-extractor
    ```
 
-2. Instale las dependencias:
+2. Instale las dependencias usando uv:
 
    ```
-   pip install dspy-ai
+   uv init
+   uv sync
    ```
 
-   Si necesita cargar variables desde un archivo .env y su entorno no lo hace automáticamente:
-
-   ```
-   pip install python-dotenv
-   ```
+   > **Nota**: Si prefiere usar pip en lugar de uv, puede instalar las dependencias con:
+   >
+   > ```
+   > pip install dspy groq python-dotenv
+   > ```
 
 3. Configure su API key de Groq. Tiene dos opciones:
 
@@ -60,6 +61,12 @@ Esta herramienta es útil para equipos de desarrollo de software que desean auto
    ```
 
    En algunos entornos, el archivo `.env` se cargará automáticamente. Si no funciona, puede instalar python-dotenv:
+
+   ```
+   uv add python-dotenv
+   ```
+
+   ó
 
    ```
    pip install python-dotenv
@@ -83,7 +90,7 @@ Esta herramienta es útil para equipos de desarrollo de software que desean auto
 2. Ejecute el script:
 
    ```
-   python requirements_extractor.py
+   python main.py
    ```
 
 3. El script analizará la transcripción y mostrará los requerimientos extraídos organizados en categorías.
